@@ -11,6 +11,9 @@ sudo apt install -y python3 npm
 
 fc-cache -f -v
 
+git config --global user.name "Lucas Aguiar"
+git config --global user.email "7lucasdaniel@gmail.com"
+
 ### Execute Packages Installation
 find ./packages/* | xargs chmod +x
 for script in ./packages/*; do

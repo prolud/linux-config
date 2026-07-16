@@ -3,8 +3,10 @@
 set -euo pipefail
 
 echo "==> Removing old VS Code repository configuration..."
-grep -rl "packages.microsoft.com/repos/code" /etc/apt/sources.list.d 2>/dev/null \
-    | xargs -r sudo rm -f
+
+sudo find /etc/apt/sources.list.d -type f \
+    -exec grep -l "packages.microsoft.com/repos/code" {} + 2>/dev/null \
+    | xargs -r sudo rm -f || true
 
 sudo rm -f /usr/share/keyrings/microsoft.gpg
 sudo rm -f /etc/apt/keyrings/packages.microsoft.gpg
@@ -17,8 +19,13 @@ wget -qO- https://packages.microsoft.com/keys/microsoft.asc \
     | gpg --dearmor \
     | sudo tee /etc/apt/keyrings/packages.microsoft.gpg >/dev/null
 
+sudo chmod 644 /etc/apt/keyrings/packages.microsoft.gpg
+
 echo "==> Adding VS Code repository..."
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
+
+ARCH=$(dpkg --print-architecture)
+
+echo "deb [arch=${ARCH} signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
     | sudo tee /etc/apt/sources.list.d/vscode.list >/dev/null
 
 echo "==> Updating package index..."

@@ -319,7 +319,7 @@
         "description": "Panels  (Please read tooltip)",
         "tooltip": "Apply effects to the Panels. This option should work well with most dark desktop themes but light themes could also be made to work with some creative use of the dimming color settings and an appropriate background image. It overrides some themes settings to achieve a (semi-)transparent panel so that the blurred background is visible.",
         "default": true,
-        "value": true
+        "value": false
     },
     "enable-popup-effects": {
         "type": "switch",
@@ -1740,6 +1740,19 @@
             }
         ],
         "value": [
+            {
+                "enabled": false,
+                "application": "Default window settings",
+                "override": false,
+                "opacity": 0,
+                "color": "rgb(0,0,0)",
+                "blurtype": 2,
+                "radius": 10,
+                "saturation": 100,
+                "corner_radius": 10,
+                "corner_top": true,
+                "corner_bottom": false
+            },
             {
                 "enabled": true,
                 "application": "org.kde.konsole.desktop",
