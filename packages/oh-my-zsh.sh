@@ -32,7 +32,7 @@ git clone --depth=1 \
 
 mkdir -p "$HOME/.config/zsh/conf.d"
 
-cat > "$HOME/.config/zsh/conf.d/00-oh-my-zsh.zsh" <<'EOF'
+cat > "$HOME/.config/zsh/conf.d/-oh-my-zsh.zsh" <<'EOF'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(

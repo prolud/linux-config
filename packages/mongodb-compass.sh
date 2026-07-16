@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
 VERSION="1.49.12"
 PACKAGE="mongodb-compass_${VERSION}_amd64.deb"
 URL="https://downloads.mongodb.com/compass/${PACKAGE}"

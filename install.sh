@@ -1,15 +1,19 @@
 sudo apt update
 
 # Environment
-sudo apt install zsh neofetch flatpak btop
+sudo apt install -y zsh neofetch flatpak btop fonts-firacode
 
 # Tools
-sudo apt install openssl nmap dirb neovim wget gpg apt-transport-https pwgen
+sudo apt install -y openssl nmap dirb neovim wget gpg apt-transport-https pwgen
 
 # Development
-sudo apt install python3 npm
+sudo apt install -y python3 npm
+
+fc-cache -f -v
 
 ### Execute Packages Installation
+find ./packages/* | xargs chmod +x
 for script in ./packages/*; do
-    [[ -x "$script" ]] && "$script"
+    echo $script
+    "$script"
 done
