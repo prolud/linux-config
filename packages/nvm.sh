@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "Installing NVM..."
+
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
+
+NVM_DIR="${HOME}/.nvm"
+
+mkdir -p "${HOME}/.config/zsh"
+
+echo "NVM installation completed."
+echo
+echo "Restart your terminal or run:"
+echo "source ~/.zshrc"
+
+### Writing config file:
+cat > "${HOME}/.config/zsh/nvm.zsh" <<'EOF'
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+EOF
