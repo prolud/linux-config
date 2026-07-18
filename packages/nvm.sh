@@ -1,4 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
+# [DESCRIPTION]
+# this file is responsable for nvm installation
+# it was genereted by chatgpt XD
+
+# [STATUS]
+# DEPRECATED!
 
 set -euo pipefail
 

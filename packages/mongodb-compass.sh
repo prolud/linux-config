@@ -1,4 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
+# [DESCRIPTION]
+# this file is responsable for mongodb compass installation
+# it adds sourcegit to the apt sources then installs it
+
+# [STATUS]
+# OK!
 
 set -euo pipefail
 
@@ -21,6 +28,5 @@ rm -f "$PACKAGE"
 
 echo
 echo "MongoDB Compass has been installed successfully."
-echo
 echo "Version:"
 mongodb-compass --version
