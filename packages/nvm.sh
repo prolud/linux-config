@@ -16,7 +16,7 @@ curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bas
 NVM_DIR="${HOME}/.nvm"
 
 ### Writing config file:
-cat > "~/.bashrc.d/nvm.sh" <<'EOF'
+cat > ~/.bashrc.d/nvm.sh <<'EOF'
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
