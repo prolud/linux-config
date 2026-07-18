@@ -37,11 +37,9 @@ for VERSION in "${VERSIONS[@]}"; do
     tar -xzf "/tmp/$FILE" -C "$INSTALL_DIR"
 
     rm "/tmp/$FILE"
-
-    mkdir -p ~/.config/zsh
 done
 
-cat > ~/.config/zsh/conf.d/dotnet.zsh <<'EOF'
+cat > ~/.bashrc.d/dotnet.sh <<'EOF'
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH"
 EOF
