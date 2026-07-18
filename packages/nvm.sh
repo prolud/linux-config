@@ -23,7 +23,7 @@ echo "Restart your terminal or run:"
 echo "source ~/.zshrc"
 
 ### Writing config file:
-cat > "${HOME}/.config/zsh/conf.d/nvm.zsh" <<'EOF'
+cat > "~/.bashrc.d/nvm.zsh" <<'EOF'
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
