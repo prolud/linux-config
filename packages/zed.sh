@@ -10,3 +10,7 @@
 set -euo pipefail
 
 curl -f https://zed.dev/install.sh | sh
+
+cat > ~/.bashrc.d/zed.sh << 'EOF'
+export PATH="$HOME/.local/zed.app/bin:$PATH"
+EOF
