@@ -5,7 +5,7 @@
 # it was genereted by chatgpt XD
 
 # [STATUS]
-# DEPRECATED!
+# OK!
 
 set -euo pipefail
 
@@ -15,7 +15,8 @@ curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bas
 
 NVM_DIR="${HOME}/.nvm"
 
-### Writing config file:
+### Writing config file:\
+mkdir -p ~/.bashrc.d
 cat > ~/.bashrc.d/nvm.sh <<'EOF'
 export NVM_DIR="$HOME/.nvm"
 

@@ -7,6 +7,8 @@
 # [STATUS]
 # OK!
 
+set -euo pipefail
+
 mkdir -p ~/.bashrc.d
 cp -f ./config/bashrc.sh ~/.bashrc.d/_init.sh
 

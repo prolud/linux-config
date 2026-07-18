@@ -39,6 +39,7 @@ for VERSION in "${VERSIONS[@]}"; do
     rm "/tmp/$FILE"
 done
 
+mkdir -p ~/.bashrc.d
 cat > ~/.bashrc.d/dotnet.sh <<'EOF'
 export DOTNET_ROOT="$HOME/.dotnet"
 export PATH="$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH"
