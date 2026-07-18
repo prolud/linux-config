@@ -15,17 +15,16 @@ curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bas
 
 NVM_DIR="${HOME}/.nvm"
 
-mkdir -p "${HOME}/.config/zsh"
-
-echo "NVM installation completed."
-echo
-echo "Restart your terminal or run:"
-echo "source ~/.zshrc"
-
 ### Writing config file:
-cat > "~/.bashrc.d/nvm.zsh" <<'EOF'
+cat > "~/.bashrc.d/nvm.sh" <<'EOF'
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 EOF
+
+echo "NVM installation completed."
+echo
+echo "Restart your terminal or run:"
+echo "source ~/.bashrc"
+
