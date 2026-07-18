@@ -7,13 +7,6 @@ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker c
     sudo apt remove -y "$pkg" >/dev/null 2>&1 || true
 done
 
-echo "==> Installing dependencies..."
-sudo apt update
-sudo apt install -y \
-    ca-certificates \
-    curl \
-    gnupg
-
 echo "==> Creating keyrings directory..."
 sudo install -m 0755 -d /etc/apt/keyrings
 

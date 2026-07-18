@@ -1,20 +1,21 @@
 sudo apt update
 
-# Environment
-sudo apt install -y zsh neofetch flatpak btop fonts-firacode
+# environment
+sudo apt install -y zsh neofetch flatpak btop
 
-# Tools
-sudo apt install -y openssl nmap dirb neovim wget gpg apt-transport-https pwgen
+# tools
+sudo apt install -y openssl nmap dirb neovim wget gpg apt-transport-https pwgen curl gnupg
 
-# Development
-sudo apt install -y python3 npm
-
-fc-cache -f -v
-
+# development
+sudo apt install -y python3 npm ca-certificates
 git config --global user.name "Lucas Aguiar"
 git config --global user.email "7lucasdaniel@gmail.com"
 
-### Execute Packages Installation
+# fonts
+sudo apt install -y fonts-firacode
+fc-cache -f -v
+
+# execute installation files
 find ./packages/* | xargs chmod +x
 for script in ./packages/*; do
     echo $script
