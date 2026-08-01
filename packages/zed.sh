@@ -14,3 +14,6 @@ curl -f https://zed.dev/install.sh | sh
 cat > ~/.bashrc.d/zed.sh << 'EOF'
 export PATH="$HOME/.local/zed.app/bin:$PATH"
 EOF
+
+cp -f ./config/zed-settings.jsonc ~/.config/zed/settings.json
+cp -f ./config/zed-keymap.jsonc ~/.config/zed/keymap.json
