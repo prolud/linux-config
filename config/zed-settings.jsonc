@@ -80,5 +80,7 @@
     "**/coverage_report",
     "**/.git",
     // "**/.vscode",
+    "**/StrykerOutput",
+    "**/TestResults",
   ],
 }
