@@ -17,6 +17,12 @@
   "debugger": {
     "button": false,
   },
+  "dap": {
+    "netcoredbg": {
+      "binary": "/home/lucas-aguiar/tools/netcoredbg/netcoredbg",
+      "args": [],
+    },
+  },
   "languages": {
     "CSharp": {
       "show_edit_predictions": true,
