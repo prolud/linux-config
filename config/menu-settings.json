@@ -109,7 +109,7 @@
         "type": "switch",
         "default": true,
         "description": "Use a custom icon and label",
-        "value": true
+        "value": false
     },
     "menu-icon": {
         "type": "iconfilechooser",
@@ -189,7 +189,7 @@
         "step": 1,
         "units": "px",
         "description": "Applications icon size",
-        "value": 16.0
+        "value": 16
     },
     "show-sidebar": {
         "type": "switch",
@@ -289,7 +289,7 @@
         "max": 600,
         "step": 1,
         "description": "Maximum sidebar width (px)",
-        "value": 130.0
+        "value": 180
     },
     "show-favorites": {
         "type": "switch",
