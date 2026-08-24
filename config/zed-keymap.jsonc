@@ -298,5 +298,16 @@
     "unbind": {
       "ctrl-~": "workspace::NewTerminal"
     }
+  },
+  {
+    "unbind": {
+      "ctrl-p": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "enter": "project_panel::Rename"
+    }
   }
 ]

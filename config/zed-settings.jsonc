@@ -89,4 +89,6 @@
     "**/StrykerOutput",
     "**/TestResults",
   ],
+  "remove_trailing_whitespace_on_save": false,
+  "format_on_save": "off"
 }
