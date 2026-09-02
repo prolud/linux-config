@@ -1,7 +1,7 @@
 sudo apt update
 
 # environment
-sudo apt install -y zsh neofetch flatpak btop
+sudo apt install -y zsh fastfetch flatpak btop
 
 # tools
 sudo apt install -y openssl nmap dirb neovim wget gpg apt-transport-https pwgen curl gnupg
