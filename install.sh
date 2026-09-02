@@ -2,6 +2,7 @@ sudo apt update
 
 # environment
 sudo apt install -y zsh fastfetch flatpak btop
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # tools
 sudo apt install -y openssl nmap dirb neovim wget gpg apt-transport-https pwgen curl gnupg
