@@ -53,6 +53,7 @@
   "ui_font_family": ".ZedMono",
   "buffer_font_family": ".ZedMono",
   "project_panel": {
+    "auto_fold_dirs": false,
     "dock": "left",
   },
   "outline_panel": {
@@ -62,8 +63,10 @@
     "dock": "left",
   },
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "button": false,
-    "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [],
     "model_parameters": [],
